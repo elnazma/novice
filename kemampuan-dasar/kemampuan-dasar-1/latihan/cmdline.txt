@@ -1,0 +1,601 @@
+	1. Echo
+
+	C:\Users\LENOVO>echo
+	ECHO is on.
+
+2. Lodctr
+
+	C:\Users\LENOVO>lodctr
+
+
+	LODCTR
+       		Updates registry values related to performance counters.
+		Usage:
+       	LODCTR <INI-filename>
+             	Installs counter text strings. INI-filename is the name of the
+             	initialization file that contains the counter name definitions
+             	and explain text for an extensible counter DLL.
+
+       	LODCTR /C:<filename>
+             	Upgrades counter text strings using <filename>
+
+       	LODCTR /H:<filename>
+             	Upgrades help text strings using <filename>
+
+       	LODCTR /L:<LangID>
+             	Specifies the language for the /C and /H commands
+
+       	LODCTR /S:<Backup-filename>
+            	Saves the current perf registry strings and info to
+             	<Backup-filename>
+
+       	LODCTR /R
+             	Rebuilds perf registry from scratch based on current registry
+             	settings and backup INI files.
+
+       	LODCTR /R:<filename>
+             	Restores perf registry strings & info using <filename>
+
+       	LODCTR /T:<service-name>
+             	Sets the specified performance counter provider as trusted.
+
+       	LODCTR /Q
+             	Displays performance counter provider information.
+
+       	LODCTR /Q:<service-name>
+             	Displays performance counter provider information for a
+             	specific provider.
+
+       	LODCTR /E:<service-name>
+             	Enables the performance counter provider.
+
+       	LODCTR /D:<service-name>
+             	Disables the performance counter provider.
+
+       	LODCTR /M:<Counter-Manifest> [<Installation-Path>]
+            	Installs a v2.0 performance counter provider using the specified
+             	XML manifest.
+
+             	The installation requires a full path to the DLL containing the
+             	performance counter resources (localized  strings). The path
+             	to the DLL will be determined as follows:
+
+             	If the applicationIdentity attribute in the manifest is a full
+             	path, that will be used.
+
+             	Otherwise, if <Installation-Path> is provided and is a full
+             	path, that will be used.
+
+             	Otherwise, if <Counter-Manifest> is a full path, the directory
+             	from <Counter-Manifest> will be combined with the DLL name from
+             	the applicationIdentity attribute in the manifest.
+
+		Otherwise, the current directory will be combined with the DLL
+             	name from the applicationIdentity attribute in the manifest.
+
+		Note: Any arguments with spaces in the names must be enclosed within double
+		quotation marks.
+
+3. Ver
+
+	C:\Users\LENOVO>ver
+
+	Microsoft Windows [Version 10.0.19042.1706]
+
+4. Arp
+
+Displays and modifies the IP-to-Physical address translation tables used by
+address resolution protocol (ARP).
+
+ARP -s inet_addr eth_addr [if_addr]
+ARP -d inet_addr [if_addr]
+ARP -a [inet_addr] [-N if_addr] [-v]
+
+  -a            Displays current ARP entries by interrogating the current
+                protocol data.  If inet_addr is specified, the IP and Physical
+                addresses for only the specified computer are displayed.  If
+                more than one network interface uses ARP, entries for each ARP
+                table are displayed.
+  -g            Same as -a.
+  -v            Displays current ARP entries in verbose mode.  All invalid
+                entries and entries on the loop-back interface will be shown.
+  inet_addr     Specifies an internet address.
+  -N if_addr    Displays the ARP entries for the network interface specified
+                by if_addr.
+  -d            Deletes the host specified by inet_addr. inet_addr may be
+                wildcarded with * to delete all hosts.
+  -s            Adds the host and associates the Internet address inet_addr
+                with the Physical address eth_addr.  The Physical address is
+                given as 6 hexadecimal bytes separated by hyphens. The entry
+                is permanent.
+  eth_addr      Specifies a physical address.
+  if_addr       If present, this specifies the Internet address of the
+                interface whose address translation table should be modified.
+                If not present, the first applicable interface will be used.
+Example:
+  > arp -s 157.55.85.212   00-aa-00-62-c6-09  .... Adds a static entry.
+  > arp -a                                    .... Displays the arp table.
+
+5. Nltest
+
+	C:\Users\LENOVO>nltest
+	No parameters specified. Use /? for help on command line parameters.
+
+6. Auditpol
+
+	C:\Users\LENOVO>auditpol
+	Usage: AuditPol command [<sub-command><options>]
+
+
+	Commands (only one command permitted per execution)
+  		/?               Help (context-sensitive)
+  		/get             Displays the current audit policy.
+  		/set             Sets the audit policy.
+  		/list            Displays selectable policy elements.
+  		/backup          Saves the audit policy to a file.
+  		/restore         Restores the audit policy from a file.
+  		/clear           Clears the audit policy.
+  		/remove          Removes the per-user audit policy for a user account.
+  		/resourceSACL    Configure global resource SACLs
+
+
+Use AuditPol <command> /? for details on each command
+
+7. Makecab
+
+	C:\Users\LENOVO>makecab
+	Cabinet Maker - Lossless Data Compression Tool
+
+	MAKECAB [/V[n]] [/D var=value ...] [/L dir] source [destination]
+	MAKECAB [/V[n]] [/D var=value ...] /F directive_file [...]
+
+  		source         File to compress.
+  		destination    File name to give compressed file.  If omitted, the
+                 	last character of the source file name is replaced
+                 	with an underscore (_) and used as the destination.
+  		/F directives  A file with MakeCAB directives (may be repeated). Refer to
+                 	Microsoft Cabinet SDK for information on directive_file.
+  		/D var=value   Defines variable with specified value.
+  		/L dir         Location to place destination (default is current directory).
+  		/V[n]          Verbosity level (1..3).
+
+8. Autochk
+
+	C:\Users\LENOVO>autochk
+	The C:\Windows\system32\autochk.exe application cannot be run in Win32 mode.
+
+9. Label
+
+	C:\Users\LENOVO>label
+	Volume in drive C: is Windows-SSD
+	Volume Serial Number is 0C2E-7536
+	Volume label (32 characters, ENTER for none)?
+
+	Delete current volume label (Y/N)? Y
+	Access Denied as you do not have sufficient privileges or
+	the disk may be locked by another process.
+	You have to invoke this utility running in elevated mode
+	and make sure the disk is unlocked.
+
+10. Ipconfig
+
+C:\Users\LENOVO>ipconfig
+
+	Windows IP Configuration
+
+
+	Wireless LAN adapter Local Area Connection* 1:
+
+   		Media State . . . . . . . . . . . : Media disconnected
+   		Connection-specific DNS Suffix  . :
+
+	Wireless LAN adapter Local Area Connection* 2:
+
+   		Media State . . . . . . . . . . . : Media disconnected
+   		Connection-specific DNS Suffix  . :
+
+	Wireless LAN adapter Wi-Fi:
+
+   		Connection-specific DNS Suffix  . :
+   		Link-local IPv6 Address . . . . . : fe80::f5b9:6d6e:4093:6ac8%11
+   		IPv4 Address. . . . . . . . . . . : 172.16.3.79
+   		Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   		Default Gateway . . . . . . . . . : 172.16.3.254
+
+	Ethernet adapter Bluetooth Network Connection:
+
+   		Media State . . . . . . . . . . . : Media disconnected
+   		Connection-specific DNS Suffix  . :
+
+11. Klist
+
+	C:\Users\LENOVO>klist
+
+	Current LogonId is 0:0x4f432d4
+
+	Cached Tickets: (0)
+
+12. Dir
+
+C:\Users\LENOVO>dir
+
+ 	Volume in drive C is Windows-SSD
+ 	Volume Serial Number is 0C2E-7536
+
+ 	Directory of C:\Users\LENOVO
+
+	08/19/2022  08:11 AM    <DIR>          .
+	08/19/2022  08:11 AM    <DIR>          ..
+	08/18/2022  10:48 PM             2,048 .bash_history
+	08/18/2022  09:49 PM                79 .gitconfig
+	08/16/2022  10:13 AM    <DIR>          .idlerc
+	08/19/2022  08:11 AM    <DIR>          .vscode
+	08/11/2022  03:56 PM    <DIR>          3D Objects
+	08/11/2022  03:56 PM    <DIR>          Contacts
+	08/19/2022  08:11 AM    <DIR>          Desktop
+	08/19/2022  08:22 AM    <DIR>          Documents
+	08/19/2022  08:10 AM    <DIR>          Downloads
+	08/11/2022  03:56 PM    <DIR>          Favorites
+	08/11/2022  03:56 PM    <DIR>          Links
+	08/12/2022  08:12 PM    <DIR>          Music
+	08/19/2022  08:03 AM    <DIR>          OneDrive
+	08/18/2022  07:36 PM    <DIR>          Pictures
+	08/11/2022  03:56 PM    <DIR>          Saved Games
+	08/11/2022  03:57 PM    <DIR>          Searches
+	08/13/2022  02:11 AM    <DIR>          Videos
+               2 File(s)          2,127 bytes
+              17 Dir(s)  33,455,607,808 bytes free
+
+13. Help
+
+	C:\Users\LENOVO>help
+	For more information on a specific command, type HELP command-name
+	ASSOC          Displays or modifies file extension associations.
+	ATTRIB         Displays or changes file attributes.
+	BREAK          Sets or clears extended CTRL+C checking.
+	BCDEDIT        Sets properties in boot database to control boot loading.
+	CACLS          Displays or modifies access control lists (ACLs) of files.
+	CALL           Calls one batch program from another.
+	CD             Displays the name of or changes the current directory.
+	CHCP           Displays or sets the active code page number.
+	CHDIR          Displays the name of or changes the current directory.
+	CHKDSK         Checks a disk and displays a status report.
+	CHKNTFS        Displays or modifies the checking of disk at boot time.
+	CLS            Clears the screen.
+	CMD            Starts a new instance of the Windows command interpreter.
+	COLOR          Sets the default console foreground and background colors.
+	COMP           Compares the contents of two files or sets of files.
+	COMPACT        Displays or alters the compression of files on NTFS partitions.
+	CONVERT        Converts FAT volumes to NTFS.  You cannot convert the current drive.
+	COPY           Copies one or more files to another location.
+	DATE           Displays or sets the date.
+	DEL            Deletes one or more files.
+	DIR            Displays a list of files and subdirectories in a directory.
+	DISKPART       Displays or configures Disk Partition properties.
+	DOSKEY         Edits command lines, recalls Windows commands, and creates macros.
+	DRIVERQUERY    Displays current device driver status and properties.
+	ECHO           Displays messages, or turns command echoing on or off.
+	ENDLOCAL       Ends localization of environment changes in a batch file.
+	ERASE          Deletes one or more files.
+	EXIT           Quits the CMD.EXE program (command interpreter).
+	FC             Compares two files or sets of files, and displays the differences between them.
+	FIND           Searches for a text string in a file or files.
+	FINDSTR        Searches for strings in files.
+	FOR            Runs a specified command for each file in a set of files.
+	FORMAT         Formats a disk for use with Windows.
+	FSUTIL         Displays or configures the file system properties.
+	FTYPE          Displays or modifies file types used in file extension associations.
+	GOTO           Directs the Windows command interpreter to a labeled line in 	a batch program.
+	GPRESULT       Displays Group Policy information for machine or user.
+	GRAFTABL       Enables Windows to display an extended character set in graphics mode.
+	HELP           Provides Help information for Windows commands.
+	ICACLS         Display, modify, backup, or restore ACLs for files and directories.
+	IF             Performs conditional processing in batch programs.
+	LABEL          Creates, changes, or deletes the volume label of a disk.
+	MD             Creates a directory.
+	MKDIR          Creates a directory.
+	MKLINK         Creates Symbolic Links and Hard Links
+	MODE           Configures a system device.
+	MORE           Displays output one screen at a time.
+	MOVE           Moves one or more files from one directory to another
+               directory.
+	OPENFILES      Displays files opened by remote users for a file share.
+	PATH           Displays or sets a search path for executable files.
+	PAUSE          Suspends processing of a batch file and displays a message.
+	POPD           Restores the previous value of the current directory saved by PUSHD.
+	PRINT          Prints a text file.
+	PROMPT         Changes the Windows command prompt.
+	PUSHD          Saves the current directory then changes it.
+	RD             Removes a directory.
+	RECOVER        Recovers readable information from a bad or defective disk.
+	REM            Records comments (remarks) in batch files or CONFIG.SYS.
+	REN            Renames a file or files.
+	RENAME         Renames a file or files.
+	REPLACE        Replaces files.
+	RMDIR          Removes a directory.
+	ROBOCOPY       Advanced utility to copy files and directory trees
+	SET            Displays, sets, or removes Windows environment variables.
+	SETLOCAL       Begins localization of environment changes in a batch file.
+	SC             Displays or configures services (background processes).
+	SCHTASKS       Schedules commands and programs to run on a computer.
+	SHIFT          Shifts the position of replaceable parameters in batch files.
+	SHUTDOWN       Allows proper local or remote shutdown of machine.
+	SORT           Sorts input.
+	START          Starts a separate window to run a specified program or command.
+	SUBST          Associates a path with a drive letter.
+	SYSTEMINFO     Displays machine specific properties and configuration.
+	TASKLIST       Displays all currently running tasks including services.
+	TASKKILL       Kill or stop a running process or application.
+	TIME           Displays or sets the system time.
+	TITLE          Sets the window title for a CMD.EXE session.
+	TREE           Graphically displays the directory structure of a drive or path.
+	TYPE           Displays the contents of a text file.
+	VER            Displays the Windows version.
+	VERIFY         Tells Windows whether to verify that your files are written correctly to a disk.
+	VOL            Displays a disk volume label and serial number.
+	XCOPY          Copies files and directory trees.
+	WMIC           Displays WMI information inside interactive command shell.
+
+	For more information on tools see the command-line reference in the online help.
+
+14. Systeminfo
+
+	C:\Users\LENOVO>systeminfo
+
+	Host Name:                 LAPTOP-ULDSRPO8
+	OS Name:                   Microsoft Windows 10 Home Single Language
+	OS Version:                10.0.19042 N/A Build 19042
+	OS Manufacturer:           Microsoft Corporation
+	OS Configuration:          Standalone Workstation
+	OS Build Type:             Multiprocessor Free
+	Registered Owner:          LENOVO
+	Registered Organization:   N/A
+	Product ID:                00327-70000-00001-AA964
+	Original Install Date:     8/11/2022, 3:53:17 PM
+	System Boot Time:          8/15/2022, 10:52:03 PM
+	System Manufacturer:       LENOVO
+	System Model:              82C6
+	System Type:               x64-based PC
+	Processor(s):              1 Processor(s) Installed.
+                           	   [01]: AMD64 Family 23 Model 32 Stepping 1 AuthenticAMD ~1200 Mhz
+	BIOS Version:              LENOVO E8CN31WW, 11/11/2021
+	Windows Directory:         C:\Windows
+	System Directory:          C:\Windows\system32
+	Boot Device:               \Device\HarddiskVolume1
+	System Locale:             en-us;English (United States)
+	Input Locale:              en-us;English (United States)
+	Time Zone:                 (UTC-08:00) Pacific Time (US & Canada)
+	Total Physical Memory:     6,020 MB
+	Available Physical Memory: 1,738 MB
+	Virtual Memory: Max Size:  7,684 MB
+	Virtual Memory: Available: 829 MB
+	Virtual Memory: In Use:    6,855 MB
+	Page File Location(s):     C:\pagefile.sys
+	Domain:                    WORKGROUP
+	Logon Server:              \\LAPTOP-ULDSRPO8
+	Hotfix(s):                 8 Hotfix(s) Installed.
+                           		[01]: KB5013624
+                           		[02]: KB4562830
+                           		[03]: KB4570334
+                           		[04]: KB4580325
+                           		[05]: KB4586864
+                           		[06]: KB5013942
+                           		[07]: KB5014032
+                           		[08]: KB5000981
+	Network Card(s):           2 NIC(s) Installed.
+                           		[01]: Qualcomm Atheros QCA61x4A Wireless Network Adapter
+                                 	Connection Name: Wi-Fi
+                                 	DHCP Enabled:    Yes
+                                 	DHCP Server:     172.16.3.254
+                                 	IP address(es)
+                                 	[01]: 172.16.3.79
+                                 	[02]: fe80::f5b9:6d6e:4093:6ac8
+                           		[02]: Bluetooth Device (Personal Area Network)
+                                 	Connection Name: Bluetooth Network Connection
+                                 	Status:          Media disconnected
+	Hyper-V Requirements:      VM Monitor Mode Extensions: Yes
+                           		Virtualization Enabled In Firmware: Yes
+                           		Second Level Address Translation: Yes
+                           		Data Execution Prevention Available: Yes
+
+15. Tree
+
+C:\Users\LENOVO>tree
+Folder PATH listing for volume Windows-SSD
+Volume serial number is 0C2E-7536
+C:.
+├───.idlerc
+├───.vscode
+│   └───extensions
+├───3D Objects
+├───Contacts
+├───Desktop
+├───Documents
+│   ├───Custom Office Templates
+│   └───dokumen pribadi
+├───Downloads
+├───Favorites
+│   ├───Lenovo
+│   └───Links
+├───Links
+├───Music
+│   └───fav song
+├───OneDrive
+│   ├───Documents
+│   └───Pictures
+│       └───Screenshots
+├───Pictures
+│   ├───Camera Roll
+│   ├───great
+│   └───Saved Pictures
+├───Saved Games
+├───Searches
+└───Videos
+    └───Captures
+
+16. Cpher
+
+C:\Users\LENOVO>cipher
+
+ Listing C:\Users\LENOVO\
+ New files added to this directory will not be encrypted.
+
+U .bash_history
+U .gitconfig
+U .idlerc
+U .vscode
+U 3D Objects
+U Contacts
+U Desktop
+U Documents
+U Downloads
+U Favorites
+U Links
+U Music
+U OneDrive
+U Pictures
+U Saved Games
+U Searches
+U Videos
+
+17. Hostname
+
+	C:\Users\LENOVO>hostname
+	LAPTOP-ULDSRPO8
+
+18. Ping
+
+C:\Users\LENOVO>ping
+
+Usage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
+            [-r count] [-s count] [[-j host-list] | [-k host-list]]
+            [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]
+            [-4] [-6] target_name
+
+Options:
+    -t             Ping the specified host until stopped.
+                   To see statistics and continue - type Control-Break;
+                   To stop - type Control-C.
+    -a             Resolve addresses to hostnames.
+    -n count       Number of echo requests to send.
+    -l size        Send buffer size.
+    -f             Set Don't Fragment flag in packet (IPv4-only).
+    -i TTL         Time To Live.
+    -v TOS         Type Of Service (IPv4-only. This setting has been deprecated
+                   and has no effect on the type of service field in the IP
+                   Header).
+    -r count       Record route for count hops (IPv4-only).
+    -s count       Timestamp for count hops (IPv4-only).
+    -j host-list   Loose source route along host-list (IPv4-only).
+    -k host-list   Strict source route along host-list (IPv4-only).
+    -w timeout     Timeout in milliseconds to wait for each reply.
+    -R             Use routing header to test reverse route also (IPv6-only).
+                   Per RFC 5095 the use of this routing header has been
+                   deprecated. Some systems may drop echo requests if
+                   this header is used.
+    -S srcaddr     Source address to use.
+    -c compartment Routing compartment identifier.
+    -p             Ping a Hyper-V Network Virtualization provider address.
+    -4             Force using IPv4.
+    -6             Force using IPv6.
+
+
+19. Whoami
+
+	C:\Users\LENOVO>whoami
+	laptop-uldsrpo8\lenovo
+
+20. Sc
+
+C:\Users\LENOVO>sc
+DESCRIPTION:
+        SC is a command line program used for communicating with the
+        Service Control Manager and services.
+USAGE:
+        sc <server> [command] [service name] <option1> <option2>...
+
+
+        The option <server> has the form "\\ServerName"
+        Further help on commands can be obtained by typing: "sc [command]"
+        Commands:
+          query-----------Queries the status for a service, or
+                          enumerates the status for types of services.
+          queryex---------Queries the extended status for a service, or
+                          enumerates the status for types of services.
+          start-----------Starts a service.
+          pause-----------Sends a PAUSE control request to a service.
+          interrogate-----Sends an INTERROGATE control request to a service.
+          continue--------Sends a CONTINUE control request to a service.
+          stop------------Sends a STOP request to a service.
+          config----------Changes the configuration of a service (persistent).
+          description-----Changes the description of a service.
+          failure---------Changes the actions taken by a service upon failure.
+          failureflag-----Changes the failure actions flag of a service.
+          sidtype---------Changes the service SID type of a service.
+          privs-----------Changes the required privileges of a service.
+          managedaccount--Changes the service to mark the service account
+                          password as managed by LSA.
+          qc--------------Queries the configuration information for a service.
+          qdescription----Queries the description for a service.
+          qfailure--------Queries the actions taken by a service upon failure.
+          qfailureflag----Queries the failure actions flag of a service.
+          qsidtype--------Queries the service SID type of a service.
+          qprivs----------Queries the required privileges of a service.
+          qtriggerinfo----Queries the trigger parameters of a service.
+          qpreferrednode--Queries the preferred NUMA node of a service.
+          qmanagedaccount-Queries whether a services uses an account with a
+                          password managed by LSA.
+          qprotection-----Queries the process protection level of a service.
+          quserservice----Queries for a local instance of a user service template.
+          delete----------Deletes a service (from the registry).
+          create----------Creates a service. (adds it to the registry).
+          control---------Sends a control to a service.
+          sdshow----------Displays a service's security descriptor.
+          sdset-----------Sets a service's security descriptor.
+          showsid---------Displays the service SID string corresponding to an arbitrary name.
+          triggerinfo-----Configures the trigger parameters of a service.
+          preferrednode---Sets the preferred NUMA node of a service.
+          GetDisplayName--Gets the DisplayName for a service.
+          GetKeyName------Gets the ServiceKeyName for a service.
+          EnumDepend------Enumerates Service Dependencies.
+
+        The following commands don't require a service name:
+        sc <server> <command> <option>
+          boot------------(ok | bad) Indicates whether the last boot should
+                          be saved as the last-known-good boot configuration
+          Lock------------Locks the Service Database
+          QueryLock-------Queries the LockStatus for the SCManager Database
+EXAMPLE:
+        sc start MyService
+
+
+QUERY and QUERYEX OPTIONS:
+        If the query command is followed by a service name, the status
+        for that service is returned.  Further options do not apply in
+        this case.  If the query command is followed by nothing or one of
+        the options listed below, the services are enumerated.
+    type=    Type of services to enumerate (driver, service, userservice, all)
+             (default = service)
+    state=   State of services to enumerate (inactive, all)
+             (default = active)
+    bufsize= The size (in bytes) of the enumeration buffer
+             (default = 4096)
+    ri=      The resume index number at which to begin the enumeration
+             (default = 0)
+    group=   Service group to enumerate
+             (default = all groups)
+
+SYNTAX EXAMPLES
+sc query                - Enumerates status for active services & drivers
+sc query eventlog       - Displays status for the eventlog service
+sc queryex eventlog     - Displays extended status for the eventlog service
+sc query type= driver   - Enumerates only active drivers
+sc query type= service  - Enumerates only Win32 services
+sc query state= all     - Enumerates all services & drivers
+sc query bufsize= 50    - Enumerates with a 50 byte buffer
+sc query ri= 14         - Enumerates with resume index = 14
+sc queryex group= ""    - Enumerates active services not in a group
+sc query type= interact - Enumerates all interactive services
+sc query type= driver group= NDIS     - Enumerates all NDIS drivers
+
+
