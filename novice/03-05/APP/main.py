@@ -9,19 +9,29 @@ def index():
         host="localhost",
         database="contoh",
         user="postgres",
-        password="7mei2004")
-
+        password="7mei2004"
+    )
     curs = conn.cursor()
     if request.method == "POST":
         nama = request.form.get("nama")
         detail = request.form.get("detail")
-        query = f"insert into buah (nama, detail) values ('{nama}', '{detail}')"
+        query = f"insert into buah(nama, detail) values('{nama}', '{detail}')"
         curs.execute(query)
         conn.commit()
-        print(request.method)
+        
+        # print(20*"=")
+        # print(request.form)
+        # print(nama)
+        # print(detail)
+        # print(20*"=")
+    
+    print(request.method)
     query = f"select * from buah"
     curs.execute(query)
     data = curs.fetchall()
+    curs.close()
+    conn.close()
+    # data = ["roti", "keju", "susu"]
     return render_template("index.html", context=data)
 
 @app.route("/detail/<buah_id>")
@@ -30,13 +40,12 @@ def detail(buah_id):
         host="localhost",
         database="contoh",
         user="postgres",
-        password="7mei2004")
-
+        password="7mei2004"
+    )
     curs = conn.cursor()
     query = f"select * from buah where id = {buah_id}"
     curs.execute(query)
     data = curs.fetchone()
-    conn.commit()
     curs.close()
     conn.close()
     print(data)
@@ -48,8 +57,8 @@ def delete(buah_id):
         host="localhost",
         database="contoh",
         user="postgres",
-        password="7mei2004")
-
+        password="7mei2004"
+    )
     curs = conn.cursor()
     query = f"delete from buah where id = {buah_id}"
     curs.execute(query)
@@ -57,6 +66,29 @@ def delete(buah_id):
     curs.close()
     conn.close()
     return redirect("/")
+
+@app.route("/update/<buah_id>")
+def update(buah_id):
+    conn = psycopg2.connect(
+        host="localhost",
+        database="contoh",
+        user="postgres",
+        password="7mei2004"
+    )
+    curs = conn.cursor()
+    
+    namaLama = 'alpukat'
+    namaBaru = 'strawberry'
+    detailBaru = 'merah'
+
+    query = f"update buah set nama='{namaBaru}', detail='{detailBaru}' where nama ='{namaLama}'"
+    curs.execute(query)
+    conn.commit()
+    print("data masuk")
+
+    return redirect("/")
+
+
 
 if __name__ == "__main__":
     app.run()
