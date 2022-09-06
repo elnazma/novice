@@ -47,7 +47,7 @@ tr:nth-child(even) {
             </tr>
             {% for d in context %}
             <tr>
-                <td>{{d[0]}}</td>
+                <td>{{loop.index}}}</td>
                 <td>{{d[1]}}</td>
                 <td>
                     <a href="/detail/{{d[0]}}">
